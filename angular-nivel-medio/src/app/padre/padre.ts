@@ -9,7 +9,7 @@ import { Hijo } from '../hijo/hijo';
 })
 export class Padre {
   textoPadre = "Hola a todos soy Ibai Llanos"
-  Lista = ["CarlosFc02", "Sayurika28", "ibaiLLanos", "Oregano12"];
+  Lista = ["CarlosFc02", "WIllyrex", "ibaiLLanos", "Oregano12"];
   indice: number | undefined;
 
   eliminar($event: number){
