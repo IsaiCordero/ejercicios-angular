@@ -1,0 +1,9 @@
+<section>
+    @if (isLoggedIn) {
+        <p>Bienvenido, {{ username }}</p>
+        <img alt="photo" src="https://www.rappler.com/tachyon/2024/06/until-then-feature-rappler-.jpg" />
+    }  @else{
+        <p> Inicia sesion mamon</p>
+        <button (click)="Loged()"> Log In</button>
+    }
+</section>

@@ -1,0 +1,23 @@
+
+
+
+<h1>DATOS:</h1>
+@if (datos.length === 0) {
+    <input type="text" [(ngModel)]="nombre" placeholder="Introduce tu nombre">
+    <br>
+    <input type="text" [(ngModel)]="correo" placeholder="Introduce tu correo">
+    <br>
+    <input type="text" [(ngModel)]="edad" placeholder="Introduce tu edad">
+    <br>
+
+    <button (click)="save(nombre, correo, edad)" [disabled]="!nombre || !correo || !edad">
+        Guardar
+    </button>
+} @else {
+    @for (item of datos; track $index) {
+        <p>Nombre: {{ item.nombre }}</p>
+        <p>Correo: {{ item.correo }}</p>
+        <p>Edad: {{ item.edad }}</p>
+        <button (click)="delete($index)"> Borrar datos</button>
+    }
+}

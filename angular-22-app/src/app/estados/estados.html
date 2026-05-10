@@ -1,0 +1,23 @@
+
+<p>Juegos Completados</p>
+@for (game of Lista; track game.id) {
+    @if (game.completado == true) {
+        <li>{{ game.nombre }}</li>
+        <button (click)="changeState(game)">No completado</button>
+    }
+    
+} 
+@if (this.Lista.filter(game => game.completado == true).length == 0) {
+    <p>Lista vacia</p>
+}
+
+<p>Juegos Incompletos</p>
+@for (game of Lista; track game.id) {
+    @if (game.completado == false) {
+        <li>{{ game.nombre }}</li>
+        <button (click)="changeState(game)">Completado</button>
+    } 
+}
+@if (this.Lista.filter(game => game.completado == false).length == 0) {
+    <p>Lista vacia</p>
+}

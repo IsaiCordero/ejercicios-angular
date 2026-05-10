@@ -1,0 +1,10 @@
+<p>Lista:</p>
+@for (item of lista; track $index) {
+    <li>{{ item }}</li><button (click)="eliminar(lista.indexOf(item))">Eliminar item</button>
+}
+@if (lista.length == 0) {
+    <p>Lista vacia</p>
+}
+<p>Añadir nuevos valores</p>
+<input type="text" [(ngModel)] ="nombre" placeholder="Añadir elemento">
+<button (click)="agregar(nombre)">Añadir a la lista</button>

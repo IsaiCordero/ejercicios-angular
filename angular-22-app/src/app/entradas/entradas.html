@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="name" placeholder="Escribe tu nombre">
+<button (click)="cambioNombre(name)"> Aceptar</button>
+
+@if (nombre != null) {
+    <p>Hola, {{ nombre }}</p>
+} @else {
+    <p>Hola, invitado</p>
+}

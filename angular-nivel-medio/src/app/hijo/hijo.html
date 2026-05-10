@@ -1,0 +1,6 @@
+<h4>Lista de usuarios</h4>
+@for (item of Lista; track $index) {
+    {{item}}
+    <button (click)="eliminarUsuario($index)"> Eliminar Usuario</button>
+    <br>
+}

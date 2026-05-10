@@ -1,0 +1,6 @@
+<p>Lista: </p>
+@for (item of list; track $index) {
+    <li>{{ item }}</li>
+}
+<input type="text" [(ngModel)]="nombre" placeholder="Escribe algo para añadir">
+<button (click)="agregar(nombre)">Añadir</button>
