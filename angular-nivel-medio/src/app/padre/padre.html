@@ -1,2 +1,5 @@
 <h2>Componente papi</h2>
-<app-hijo [Lista] = "Lista" (eventoEliminar)="eliminar($event)"></app-hijo>
+<app-hijo [Lista] = "Lista" (eventoEliminar)="eliminar($event)"
+            [Texto]="textoPadre"
+            [Tareas] = "Tareas" (eventoCambiar)="changeState($event)"
+></app-hijo>

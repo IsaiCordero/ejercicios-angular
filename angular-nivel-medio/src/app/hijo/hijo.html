@@ -1,6 +1,18 @@
-<h4>Lista de usuarios</h4>
-@for (item of Lista; track $index) {
-    {{item}}
+<h4>Lista de usuarios - edad</h4>
+@for (item of Lista; track item.id) {
+    {{item.nombre}} - {{ item.edad }}
     <button (click)="eliminarUsuario($index)"> Eliminar Usuario</button>
+    <br>
+}
+@if (Lista?.length == 0) {
+    <p>Lista vacia!</p>
+}
+
+<h5>Mensaje heretics</h5>
+<p>{{ Texto }}</p>
+
+@for (tarea of Tareas; track tarea.id) {
+    {{tarea.tarea}} -- {{ tarea.completada }}
+    <button (click)="completarTarea(tarea)">Cambiar Estado</button>
     <br>
 }
