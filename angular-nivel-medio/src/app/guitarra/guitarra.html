@@ -1,0 +1,5 @@
+<p>{{elementoActual.tipo}}</p>
+<img [src]="elementoActual.imagen" [alt]="elementoActual.valor">
+<br>
+<input type="text" [(ngModel)]="entrada" placeholder="Introduce de cual se trata">
+<button (click)="cambiarElemento()">Aceptar</button>
